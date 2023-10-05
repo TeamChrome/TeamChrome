@@ -1,7 +1,5 @@
 package test;
-
-
-import Room.Room;
+import src.main.java.Room;
 import org.junit.Assert;
 import org.junit.Test;
 public class RoomTest {
