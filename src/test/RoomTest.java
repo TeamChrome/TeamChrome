@@ -1,4 +1,4 @@
-package test;
+package src.test;
 import src.main.java.Room;
 import org.junit.Assert;
 import org.junit.Test;
