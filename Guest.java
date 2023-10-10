@@ -39,8 +39,9 @@ public class Guest {
             this.address = address;
         }
 
+        //allow guest to modify their reservation
         public void ModifyReservation() {
-            //allow guest to modify their reservation
+
         }
 
 
