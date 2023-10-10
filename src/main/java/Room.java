@@ -44,7 +44,7 @@ public class Room {
 
     public void setRoomNumber(int roomNumber) {
         if(roomNumber < 0 || roomNumber > MAXIMUM_ROOM_NUMBER){
-            System.err.println("[Room.setRoomNumber] The given roomNumber is invalid" + roomNumber);
+            System.err.println("[Room.setRoomNumber] The given roomNumber is invalid: " + roomNumber);
             return;
         }
         this.roomNumber = roomNumber;
@@ -56,7 +56,7 @@ public class Room {
 
     public void setRoomLevel(int roomLevel) {
         if(roomLevel < 0 || roomLevel > MAXIMUM_ROOM_LEVEL){
-            System.err.println("[Room.setRoomLevel] The given roomLevel is invalid" + roomLevel);
+            System.err.println("[Room.setRoomLevel] The given roomLevel is invalid: " + roomLevel);
             return;
         }
         this.roomLevel = roomLevel;
