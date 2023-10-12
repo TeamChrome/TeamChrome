@@ -1,16 +1,19 @@
 package src.test;
 
+import org.junit.Assert;
 import org.junit.Test;
 import src.main.java.Reservation;
 
 import java.time.Period;
 
-import static org.junit.jupiter.api.Assertions.*;
 
-class ReservationTest {
+
+public class ReservationTest {
     @Test
     public void paramContrusctor(){
         Reservation reservation = new Reservation();
-        assert(reservation.getReservationTime() == Period.ZERO);
+        Assert.assertEquals(reservation.getReservationID(),"");
+        Assert.assertEquals(reservation.getReservationTime(),Period.ZERO);
+
     }
 }

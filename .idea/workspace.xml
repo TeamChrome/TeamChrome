@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="17a55140-5394-4c99-a630-bcb953960d6a" name="Changes" comment="Fixed error messages">
+    <list default="true" id="17a55140-5394-4c99-a630-bcb953960d6a" name="Changes" comment="Writing ReservationTest">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Reservation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReservationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/ReservationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/main.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/ReservationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/ReservationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,17 +89,14 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.RoomTest (1)">
-    <configuration name="RoomTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ReservationTest">
+    <configuration name="ReservationTest" type="JUnit" factoryName="JUnit">
       <module name="TeamChrome" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="src.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="18" />
       <option name="PACKAGE_NAME" value="src.test" />
-      <option name="MAIN_CLASS_NAME" value="src.test.RoomTest" />
+      <option name="MAIN_CLASS_NAME" value="src.test.ReservationTest" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -117,8 +110,25 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="test" />
+      <option name="PACKAGE_NAME" value="src.test.test" />
       <option name="MAIN_CLASS_NAME" value="src.test.test.RoomTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RoomTest2" type="JUnit" factoryName="JUnit" temporary="true">
+      <module name="TeamChrome" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="src.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="src.test" />
+      <option name="MAIN_CLASS_NAME" value="src.test.RoomTest" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -172,9 +182,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="JUnit.ReservationTest" />
+      <item itemvalue="JUnit.RoomTest" />
+      <item itemvalue="JUnit.RoomTest.RoomCheckInOut" />
+      <item itemvalue="JUnit.RoomTest.RoomSetCheckedIn" />
+      <item itemvalue="JUnit.RoomTest.setRoomLevel" />
+      <item itemvalue="JUnit.RoomTest2" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.RoomTest (1)" />
+        <item itemvalue="JUnit.RoomTest2" />
         <item itemvalue="JUnit.RoomTest" />
         <item itemvalue="JUnit.RoomTest.setRoomLevel" />
         <item itemvalue="JUnit.RoomTest.RoomCheckInOut" />
@@ -234,7 +252,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696977144523</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Refactored and created test file">
+      <option name="closed" value="true" />
+      <created>1697151513701</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1697151513701</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,7 +295,9 @@
     <MESSAGE value="Created getter and setters for Room and RoomTest class" />
     <MESSAGE value="Created package, getter and setters for Room and RoomTest class" />
     <MESSAGE value="Fixed error messages" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed error messages" />
+    <MESSAGE value="Refactored and created test file" />
+    <MESSAGE value="Writing ReservationTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="Writing ReservationTest" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
