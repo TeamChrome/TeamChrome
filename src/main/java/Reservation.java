@@ -1,3 +1,5 @@
+package src.main.java;
+
 import java.time.Period;
 import java.util.UUID;
 
@@ -12,6 +14,13 @@ public class Reservation {
         this.guestID = guestID;
         this.roomNumber = roomNumber;
         this.reservationTime = reservationTime;
+    }
+
+    public Reservation() {
+        this.reservationID = "";
+        this.guestID = "";
+        this.roomNumber = 0;
+        this.reservationTime = Period.ZERO;
     }
 
     public String getReservationID() {
