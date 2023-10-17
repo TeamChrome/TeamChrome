@@ -1,26 +1,30 @@
 package src.main.java;
 
-import java.time.Period;
+
+import java.util.Date;
 import java.util.UUID;
 
 public class Reservation {
     private String reservationID;
     private String guestID;
     private int roomNumber;
-    private Period reservationTime;
+    private Date checkIn;
+    private Date checkOut;
 
-    public Reservation(String guestID, int roomNumber, Period reservationTime) {
+    public Reservation(String guestID, int roomNumber, Date checkIn, Date checkOut) {
         this.reservationID = UUID.randomUUID().toString();
         this.guestID = guestID;
         this.roomNumber = roomNumber;
-        this.reservationTime = reservationTime;
+        this.checkIn = checkIn;
+        this.checkOut = checkOut;
     }
 
     public Reservation() {
         this.reservationID = "";
         this.guestID = "";
         this.roomNumber = 0;
-        this.reservationTime = Period.ZERO;
+        this.checkIn = null;
+        this.checkOut = null;
     }
 
     public String getReservationID() {
@@ -47,11 +51,31 @@ public class Reservation {
         this.roomNumber = roomNumber;
     }
 
-    public Period getReservationTime() {
-        return reservationTime;
+    public Date getCheckIn() {
+        return checkIn;
     }
 
-    public void setReservationTime(Period reservationTime) {
-        this.reservationTime = reservationTime;
+    public void setCheckIn(Date checkIn) {
+        this.checkIn = checkIn;
+    }
+
+    public Date getCheckOut() {
+        return checkOut;
+    }
+
+    public void setCheckOut(Date checkOut) {
+        this.checkOut = checkOut;
+    }
+
+    public boolean isWithinStay(Date date){
+        if(checkIn.after(date)){
+            return false;
+        }
+
+        if(checkOut.before(date)){
+            return false;
+        }
+
+        return true;
     }
 }
