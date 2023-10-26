@@ -1,8 +1,8 @@
 public class Guest {
-        String name;
-        String email;
-        String phoneNum;
-        String address;
+        private final String name;
+        private String email;
+        private String phoneNum;
+        private String address;
 
         public Guest (String name, String email, String phoneNum, String address) {
             this.name = name;
@@ -35,13 +35,8 @@ public class Guest {
             return address;
         }
 
-        public void setName (String address) {
+        public void setAddress (String address) {
             this.address = address;
-        }
-
-        //allow guest to modify their reservation
-        public void ModifyReservation() {
-
         }
 
 
