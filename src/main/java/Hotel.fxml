@@ -37,19 +37,18 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.RoomSearchTableController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="772.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.RoomSearchTableController">
    <children>
-      <TableView fx:id="roomSearchTable" layoutX="85.0" layoutY="42.0" prefHeight="299.0" prefWidth="538.0">
+      <TableView fx:id="roomSearchTable" layoutX="160.0" layoutY="43.0" prefHeight="299.0" prefWidth="538.0">
         <columns>
-          <TableColumn fx:id="roomTypeTableColumn" prefWidth="75.0" text="Room Type" />
-          <TableColumn fx:id="roomCostTableColumn" prefWidth="97.0" text="Cost Per Night" />
-            <TableColumn fx:id="roomNumberTableColumn" prefWidth="114.0" text="Room Number" />
+          <TableColumn fx:id="roomTypeTableColumn" prefWidth="97.0" text="Room Type" />
+          <TableColumn fx:id="roomCostTableColumn" prefWidth="132.0" text="Cost Per Night" />
+            <TableColumn fx:id="roomNumberTableColumn" prefWidth="173.0" text="Room Number" />
         </columns>
       </TableView>
-      <RadioButton layoutX="14.0" layoutY="120.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="67.0" text="SUITE" />
-      <RadioButton layoutX="14.0" layoutY="147.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="67.0" text="KING" />
-      <RadioButton layoutX="14.0" layoutY="174.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="67.0" text="DOUBLE" />
-      <RadioButton layoutX="14.0" layoutY="200.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="67.0" text="QUEEN" />
+      <RadioButton fx:id="suiteButton" layoutX="14.0" layoutY="120.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="67.0" text="SUITE" />
+      <RadioButton fx:id="kingButton" layoutX="14.0" layoutY="147.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="67.0" text="KING" />
+      <RadioButton layoutX="14.0" layoutY="174.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="90.0" text="DOUBLE" />
+      <RadioButton layoutX="14.0" layoutY="200.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="90.0" text="QUEEN" />
    </children>
 </AnchorPane>
