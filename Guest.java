@@ -16,39 +16,39 @@ public class Guest {
         }
 
         public String getName() {
-            return name;
+                return name;
         }
 
-    public String getId() {
-        return id;
-    }
+        public String getId() {
+                return id;
+        }
 
-    public void setId(String id) {
-        this.id = id;
-    }
+        public void setId(String id) {
+                this.id = id;
+         }
 
-    public String getEmail() {
-            return email;
+        public String getEmail() {
+                return email;
         }
 
         public void setEmail (String email) {
-            this.email = email;
+                this.email = email;
         }
 
         public String getPhoneNum() {
-            return phoneNum;
+                 return phoneNum;
         }
 
         public void setPhoneNum (String phoneNum) {
-            this.phoneNum = phoneNum;
+                this.phoneNum = phoneNum;
         }
 
         public String getAddress() {
-            return address;
+                return address;
         }
 
         public void setAddress (String address) {
-            this.address = address;
+                 this.address = address;
         }
 
 
