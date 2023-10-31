@@ -1,9 +1,15 @@
+import java.time.Clock;
 public class Amenities {
+    private String name;
+    private Open open;
 
-    private String amenitiesList() {
-
+    public Amenity() {
+        this.name = name;
+        this.open = open;
     }
-    public static void main(String[] args) {
 
+    public boolean isOpen() {
+        Clock clock = Clock.systemDefaultZone();
+        if (clock.instant )
     }
 }
