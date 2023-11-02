@@ -1,18 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Scene?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.RoomCheckoutController">
-   <children>
-      <TextArea layoutX="28.0" layoutY="57.0" prefHeight="200.0" prefWidth="200.0" />
-      <Text layoutX="35.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room Checkout">
-         <font>
-            <Font size="19.0" />
-         </font>
-      </Text>
-   </children>
-</AnchorPane>
+<Scene xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="src.main.java.RoomCheckoutController">
+   <root>
+      <AnchorPane prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <TextArea fx:id="roomTextArea" layoutX="28.0" layoutY="57.0" prefHeight="200.0" prefWidth="200.0" />
+            <Text layoutX="35.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room Checkout">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </root>
+</Scene>

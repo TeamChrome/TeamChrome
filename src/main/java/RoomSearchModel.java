@@ -1,4 +1,4 @@
-package main.java;
+package src.main.java;
 
 
 public class RoomSearchModel {
@@ -6,10 +6,13 @@ public class RoomSearchModel {
     Float costPerNight;
     Integer roomNumber;
 
-    public RoomSearchModel(String roomType, Float costPerNight, Integer roomNumber) {
+    Integer roomLevel;
+
+    public RoomSearchModel(String roomType, Float costPerNight, Integer roomNumber, Integer roomLevel) {
         this.roomType = roomType;
         this.costPerNight = costPerNight;
         this.roomNumber = roomNumber;
+        this.roomLevel = roomLevel;
     }
 
     public String getRoomType() {
@@ -36,6 +39,14 @@ public class RoomSearchModel {
         this.roomNumber = roomNumber;
     }
 
+    public Integer getRoomLevel() {
+        return roomLevel;
+    }
+
+    public void setRoomLevel(Integer roomLevel) {
+        this.roomLevel = roomLevel;
+    }
+
     @Override
     public String toString() {
         return "RoomSearchModel{" +
@@ -43,6 +54,10 @@ public class RoomSearchModel {
                 ", costPerNight=" + costPerNight +
                 ", roomNumber=" + roomNumber +
                 '}';
+    }
+
+    public Room toRoom(){
+        return new Room(Room.RoomType.valueOf(this.roomType),this.roomNumber,this.roomLevel,false);
     }
 
 
