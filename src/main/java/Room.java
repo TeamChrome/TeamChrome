@@ -1,7 +1,6 @@
 package src.main.java;
 
 public class Room {
-
     public enum RoomType{
         KING,SUITE,DOUBLE,INVALID
     }
