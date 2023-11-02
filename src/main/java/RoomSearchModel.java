@@ -1,5 +1,6 @@
 package main.java;
 
+
 public class RoomSearchModel {
     String roomType;
     Float costPerNight;
@@ -34,4 +35,15 @@ public class RoomSearchModel {
     public void setRoomNumber(Integer roomNumber) {
         this.roomNumber = roomNumber;
     }
+
+    @Override
+    public String toString() {
+        return "RoomSearchModel{" +
+                "roomType='" + roomType + '\'' +
+                ", costPerNight=" + costPerNight +
+                ", roomNumber=" + roomNumber +
+                '}';
+    }
+
+
 }

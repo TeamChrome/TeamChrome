@@ -33,7 +33,7 @@ public class GUI extends Application {
         stage.show();*
          */
 
-        Parent root = FXMLLoader.load(getClass().getResource("Hotel.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("RoomSearchTable.fxml"));
         stage.setScene(new Scene(root, 300,300));
         stage.show();
     }
