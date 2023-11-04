@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="17a55140-5394-4c99-a630-bcb953960d6a" name="Changes" comment="updated guest class">
-      <change afterPath="$PROJECT_DIR$/src/main/java/GUI2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/TeamChrome.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TeamChrome.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/javafx_sdk_21_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" />
+    <list default="true" id="17a55140-5394-4c99-a630-bcb953960d6a" name="Changes" comment="Testing out GUI front page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeamChrome/main/java/GUI2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TeamChrome/main/java/GUI2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUI2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI2.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +127,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697581113191</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Testing out GUI front page">
+      <option name="closed" value="true" />
+      <created>1699075704594</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1699075704594</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,7 +155,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="a" />
     <MESSAGE value="Created skeleton for Hotel" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created skeleton for Hotel" />
+    <MESSAGE value="Testing out GUI front page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Testing out GUI front page" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
