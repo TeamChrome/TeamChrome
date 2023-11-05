@@ -2,6 +2,8 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.paint.RadialGradient?>
@@ -30,12 +32,17 @@
                   </Stop>
                   <Stop offset="1.0">
                      <color>
-                        <Color red="1.0" green="1.0" blue="1.0" />
+                        <Color red="0.8684210777282715" green="0.4100877046585083" blue="0.14473684132099152" />
                      </color>
                   </Stop>
                </stops>
             </RadialGradient>
          </fill>
       </Text>
+      <ImageView fitHeight="232.0" fitWidth="386.0" layoutX="121.0" opacity="0.27" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@sun.jpeg" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
