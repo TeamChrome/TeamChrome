@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.GUI2">
+   <children>
+      <Button layoutX="43.0" layoutY="263.0" mnemonicParsing="false" text="Book Room" />
+      <Button layoutX="156.0" layoutY="263.0" mnemonicParsing="false" text="Modify Reservation" />
+      <Button layoutX="316.0" layoutY="263.0" mnemonicParsing="false" text="View Reservation" />
+      <Button layoutX="457.0" layoutY="263.0" mnemonicParsing="false" text="View Amenities" />
+      <Separator layoutX="43.0" layoutY="234.0" prefHeight="0.0" prefWidth="515.0" />
+      <Text layoutX="179.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HOTEL SUN" textAlignment="CENTER" wrappingWidth="242.0">
+         <font>
+            <Font name="Impact" size="62.0" />
+         </font>
+         <fill>
+            <RadialGradient centerX="0.45567867036011084" centerY="0.5095011876484561" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.9399999976158142" green="0.6800332069396973" blue="0.0658000037074089" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </fill>
+      </Text>
+   </children>
+</AnchorPane>
