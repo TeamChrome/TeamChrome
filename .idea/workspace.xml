@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="17a55140-5394-4c99-a630-bcb953960d6a" name="Changes" comment="Writing ReservationTest">
-      <change beforePath="$PROJECT_DIR$/.idea/TeamChrome.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TeamChrome.iml" afterDir="false" />
+    <list default="true" id="17a55140-5394-4c99-a630-bcb953960d6a" name="Changes" comment="Created new scene and connections between theme">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TeamChrome/main/java/GUI.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TeamChrome/main/java/RoomCheckout.fxml" beforeDir="false" />
@@ -17,7 +16,6 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/RoomCheckout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RoomCheckout.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/RoomCheckoutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RoomCheckoutController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RoomSearchModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RoomSearchModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/RoomSearchTable.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RoomSearchTable.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/RoomSearchTableController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RoomSearchTableController.java" afterDir="false" />
     </list>
@@ -63,7 +61,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
@@ -279,7 +277,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697151513701</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Created new scene and connections between theme">
+      <option name="closed" value="true" />
+      <created>1698966814618</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1698966814618</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -316,7 +322,8 @@
     <MESSAGE value="Fixed error messages" />
     <MESSAGE value="Refactored and created test file" />
     <MESSAGE value="Writing ReservationTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="Writing ReservationTest" />
+    <MESSAGE value="Created new scene and connections between theme" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created new scene and connections between theme" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

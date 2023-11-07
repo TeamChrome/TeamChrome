@@ -10,9 +10,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -48,6 +45,9 @@ public class RoomSearchTableController implements Initializable {
     @FXML
     private RadioButton kingButton;
 
+    @FXML
+    private RadioButton doubleButton;
+
     private Room selectedRoom;
     ObservableList<RoomSearchModel> roomSearchModelObservableList = FXCollections.observableArrayList();
 
@@ -55,12 +55,16 @@ public class RoomSearchTableController implements Initializable {
      * This method changes the scene to a different one
      */
 
-    public void changeScreenButtonPushed(ActionEvent event) throws IOException {
+    public void goToCheckoutPage(ActionEvent event) throws IOException {
+        if(selectedRoom == null){
+            return;
+            //later we can have an error message appear here
+        }
         System.out.println("Selected room: " + selectedRoom.toString());
         FXMLLoader loader = new FXMLLoader(getClass().getResource("RoomCheckout.fxml"));
 //        Scene roomCheckoutscene = new Scene(roomCheckoutParent);
 //        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        Stage stage = new Stage(StageStyle.DECORATED);
+        Stage stage = (Stage) suiteButton.getScene().getWindow();
         stage.setScene(loader.load());
         RoomCheckoutController controller = loader.getController();
         stage.show();
@@ -71,10 +75,10 @@ public class RoomSearchTableController implements Initializable {
     public void initialize(URL location, ResourceBundle resources){
         //fetch data here
 
-        String[] sampleRoomTypes = {"SUITE","KING","KING","TWIN"};
+        String[] sampleRoomTypes = {"SUITE","KING","KING","DOUBLE"};
         Float[] sampleRoomCosts = {100.0f,200.0f,300.0f,400.0f};
         Integer[] sampleRoomNumbers = {100,101,201,202};
-        Integer[] sampleRoomFloors = {1,1,2,2,};
+        Integer[] sampleRoomFloors = {1,1,2,2};
         for(int i = 0; i < sampleRoomNumbers.length; i++){
             roomSearchModelObservableList.add(new RoomSearchModel(sampleRoomTypes[i],sampleRoomCosts[i],sampleRoomNumbers[i],sampleRoomFloors[i]));
         }
@@ -108,6 +112,17 @@ public class RoomSearchTableController implements Initializable {
             });
         }));
 
+        doubleButton.selectedProperty().addListener(((observableValue, aBoolean, t1) -> {
+            filteredData.setPredicate(roomSearchModel -> {
+
+                if(roomSearchModel.getRoomType().equals("DOUBLE")){
+                    return t1;
+                }
+
+                return false;
+            });
+        }));
+
         roomSearchTable.getSelectionModel().selectedItemProperty().addListener(new ChangeListener() {
             @Override
             public void changed(ObservableValue observableValue, Object oldValue, Object newValue) {
@@ -115,15 +130,6 @@ public class RoomSearchTableController implements Initializable {
                 int index = selectionModel.getSelectedIndex();
                 RoomSearchModel roomModel = roomSearchTable.getItems().get(index);
                 selectedRoom = roomModel.toRoom();
-//                ObservableList<TablePosition> selectedCells = selectionModel.getSelectedCells();
-                //int index = searchResultsTable.getSelectionModel().getSelectedIndex();
-                //        Book book = searchResultsTable.getItems().get(index);
-//                for(TablePosition pos: selectedCells){
-//                    Object val = pos.getTableColumn().getCellData(newValue);
-//                    System.out.println("Selected Values " + val);
-//                }
-                //TablePosition tablePosition = selectedCells.get(0);
-
             }
         });
 
