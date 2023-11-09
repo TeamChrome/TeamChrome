@@ -4,47 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="17a55140-5394-4c99-a630-bcb953960d6a" name="Changes" comment="Created new scene and connections between theme">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TeamChrome/main/java/GUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TeamChrome/main/java/RoomCheckout.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TeamChrome/main/java/RoomCheckoutController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TeamChrome/main/java/RoomSearchModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TeamChrome/main/java/RoomSearchTable.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TeamChrome/main/java/RoomSearchTableController$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TeamChrome/main/java/RoomSearchTableController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RoomCheckout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RoomCheckout.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RoomCheckoutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RoomCheckoutController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RoomSearchTable.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RoomSearchTable.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RoomSearchTableController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RoomSearchTableController.java" afterDir="false" />
-    </list>
+    <list default="true" id="17a55140-5394-4c99-a630-bcb953960d6a" name="Changes" comment="Writing ReservationTest" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Jason" />
+        <entry key="$PROJECT_DIR$" value="Room" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;MaxwellKozlov595&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="6de6392d-8acf-42fb-990c-dbbf92d98074" />
-        <option name="url" value="https://github.com/TeamChrome/TeamChrome.git" />
-      </UrlAndAccount>
-    </option>
   </component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="4xmhzmxf" />
@@ -52,54 +32,46 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
   <component name="ProjectId" id="2WGtuiqIZsl6u8Zl4MrZIuUeLx9" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;GUI&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;18&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/maxwell/Documents/Java/TeamChrome&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "create.test.in.the.same.root": "true",
+    "git-widget-placeholder": "Reservation",
     "ignore.virus.scanning.warn.message": "true",
+    "jdk.selected.JAVA_MODULE": "18",
+    "last_opened_file_path": "/Users/maxwell/Documents/Java/TeamChrome",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.JavaFX",
     "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -114,21 +86,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.GUI">
-    <configuration name="GUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="src.main.java.GUI" />
-      <module name="TeamChrome" />
-      <option name="VM_PARAMETERS" value="--module-path /Library/Frameworks/JavaFX/javafx-sdk-21.0.1/lib --add-modules=javafx.controls,javafx.fxml" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="src.main.java.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.ReservationTest">
     <configuration name="ReservationTest" type="JUnit" factoryName="JUnit">
       <module name="TeamChrome" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -173,6 +131,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RoomTest.RoomCheckInOut" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TeamChrome" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="src.test.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="src.test.test.RoomTest" />
+      <option name="METHOD_NAME" value="RoomCheckInOut" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RoomTest.setRoomLevel" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TeamChrome" />
       <extension name="coverage">
@@ -197,24 +171,23 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.GUI" />
       <item itemvalue="Java Scratch.Scratch" />
       <item itemvalue="JUnit.ReservationTest" />
       <item itemvalue="JUnit.RoomTest" />
+      <item itemvalue="JUnit.RoomTest.RoomCheckInOut" />
       <item itemvalue="JUnit.RoomTest.setRoomLevel" />
       <item itemvalue="JUnit.RoomTest2" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.GUI" />
         <item itemvalue="Java Scratch.Scratch" />
         <item itemvalue="JUnit.RoomTest2" />
         <item itemvalue="JUnit.RoomTest" />
         <item itemvalue="JUnit.RoomTest.setRoomLevel" />
+        <item itemvalue="JUnit.RoomTest.RoomCheckInOut" />
       </list>
     </recent_temporary>
   </component>
-}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -225,6 +198,7 @@
       <updated>1696370970099</updated>
       <workItem from="1696370981609" duration="567000" />
       <workItem from="1696373143512" duration="135000" />
+      <workItem from="1696976617356" duration="3437000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit from Room">
       <option name="closed" value="true" />
@@ -274,40 +248,44 @@
       <option name="project" value="LOCAL" />
       <updated>1697151513701</updated>
     </task>
-    <task id="LOCAL-00007" summary="Created new scene and connections between theme">
-      <option name="closed" value="true" />
-      <created>1698966814618</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1698966814618</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Added date pickers">
-      <option name="closed" value="true" />
-      <created>1699567315119</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1699567315119</updated>
-    </task>
-    <option name="localTasksCounter" value="9" />
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/Room" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="a" />
-    <option name="LAST_COMMIT_MESSAGE" value="a" />
     <MESSAGE value="Initial Commit from Room" />
     <MESSAGE value="Created getter and setters for Room and RoomTest class" />
     <MESSAGE value="Created package, getter and setters for Room and RoomTest class" />
     <MESSAGE value="Fixed error messages" />
     <MESSAGE value="Refactored and created test file" />
     <MESSAGE value="Writing ReservationTest" />
-    <MESSAGE value="Created new scene and connections between theme" />
-    <MESSAGE value="Added date pickers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added date pickers" />
+    <option name="LAST_COMMIT_MESSAGE" value="Writing ReservationTest" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
