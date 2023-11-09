@@ -59,7 +59,7 @@ public class DatabaseReader {
             throw new RuntimeException(e);
         }
         //we skip the first one because its a header
-        for(int room = 1; room < records.size(); room++){
+        for(int room = 0; room < records.size(); room++){
             List<String> currentRecord = records.get(room);
             String reservationID = currentRecord.get(0);
             String guestID = currentRecord.get(1);
@@ -80,10 +80,21 @@ public class DatabaseReader {
         }
     }
 
+
+    //This function writes all the current reservations into the csv file, overwriting what is currently there
     public void writeReservations(){
-        try (BufferedWriter bw = new BufferedWriter(new FileWriter("src/main/java/data/CurrentReservations.csv"))) {
+        File currentReservationsFile = new File("src/main/java/data/CurrentReservations.csv");
+        currentReservationsFile.delete();
+        try {
+            currentReservationsFile.createNewFile();
+        } catch (IOException e){
+            throw new RuntimeException(e);
+        }
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(currentReservationsFile))) {
+
             for(Reservation currentReservation: this.reservations){
                 bw.write(currentReservation.toCSVFormat());
+                bw.write("\n");
             }
 
         } catch (IOException e) {

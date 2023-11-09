@@ -34,15 +34,15 @@ class DatabaseReaderTest {
         Date checkOut = null;
         SimpleDateFormat ft = new SimpleDateFormat ("yyyy.MM.dd");
         try {
-            checkIn = ft.parse("2023.08.17");
-            checkOut = ft.parse("2023.08.19");
+            checkIn = ft.parse("2023.08.20");
+            checkOut = ft.parse("2023.08.22");
         } catch (ParseException e){
             System.err.println("Parsing error in isWithinStay!");
         }
-        Reservation res = new Reservation("example",100,checkIn,checkOut);
-
+        Reservation res = new Reservation("example",102,checkIn,checkOut);
         reader.readRooms();
         reader.readReservations();
+        System.out.println(reader.reservations.size());
         reader.reservations.add(res);
         reader.writeReservations();
     }
