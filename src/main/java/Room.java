@@ -78,5 +78,13 @@ public class Room {
         this.checkedIn = checkedIn;
     }
 
-
+    @Override
+    public String toString() {
+        return "Room{" +
+                "roomType=" + roomType +
+                ", roomNumber=" + roomNumber +
+                ", roomLevel=" + roomLevel +
+                ", checkedIn=" + checkedIn +
+                '}';
+    }
 }

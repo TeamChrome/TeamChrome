@@ -1,7 +1,10 @@
 package src.main.java;
 
 
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.Locale;
 import java.util.UUID;
 
 public class Reservation {
@@ -77,5 +80,31 @@ public class Reservation {
         }
 
         return true;
+    }
+
+    @Override
+    public String toString() {
+        return "Reservation{" +
+                "reservationID='" + reservationID + '\'' +
+                ", guestID='" + guestID + '\'' +
+                ", roomNumber=" + roomNumber +
+                ", checkIn=" + checkIn +
+                ", checkOut=" + checkOut +
+                '}';
+    }
+
+    public String toCSVFormat(){
+        String out = "";
+        SimpleDateFormat formatter = new SimpleDateFormat("dd-MMM-yyyy", Locale.ENGLISH);
+        out+=(reservationID);
+        out+=',';
+        out+=(guestID);
+        out+=',';
+        out+=(Integer.toString(roomNumber));
+        out+=',';
+        out+=(formatter.format(checkIn));
+        out+=',';
+        out+=(formatter.format(checkOut));
+        return out;
     }
 }
