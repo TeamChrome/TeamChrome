@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.GUI2">
+   <children>
+      <DatePicker layoutX="83.0" layoutY="64.0" />
+      <DatePicker layoutX="356.0" layoutY="65.0" />
+      <Label layoutX="25.0" layoutY="69.0" text="Check-In" />
+      <Label layoutX="289.0" layoutY="69.0" text="Check-Out" />
+      <RadioButton layoutX="93.0" layoutY="109.0" mnemonicParsing="false" text="Suite" />
+      <RadioButton layoutX="152.0" layoutY="109.0" mnemonicParsing="false" text="King" />
+      <RadioButton layoutX="213.0" layoutY="109.0" mnemonicParsing="false" text="Double" />
+      <Label layoutX="25.0" layoutY="109.0" text="Room Type" />
+      <ScrollPane layoutX="15.0" layoutY="137.0" prefHeight="249.0" prefWidth="570.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+        </content>
+      </ScrollPane>
+      <Label layoutX="221.0" layoutY="14.0" text="Hotel Sun">
+         <font>
+            <Font name="Impact" size="35.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.45567867036011084" centerY="0.5095011876484561" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                         <Color red="0.9399999976158142" green="0.6800332069396973" blue="0.0658000037074089" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.8684210777282715" green="0.4100877046585083" blue="0.14473684132099152" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+   </children>
+</AnchorPane>
