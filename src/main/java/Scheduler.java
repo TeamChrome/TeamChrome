@@ -28,12 +28,12 @@ public class Scheduler {
 
     public void addGuest(Map<String, Guest> guests, Guest guest) {
         guests.put(guest.getId(), guest);
-        // ask DataBaseReader to add a new line to Guest CSV
+        // ask DataBaseReader to add a new line to src.main.java.Guest CSV
     }
 
     public void removeGuest(Map<String, Guest> guests, Guest guest) {
         guests.remove(guest.getId(), guest);
-        // ask DataBaseReader to delete a line from Guest CSV
+        // ask DataBaseReader to delete a line from src.main.java.Guest CSV
     }
 
     private void sendConfirmation() {
