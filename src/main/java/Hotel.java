@@ -11,6 +11,8 @@ public class Hotel {
     ArrayList<Guest> guestList;
 
 
+
+
     public Hotel(String hotelNameIn) {
         this.hotelName = hotelNameIn;
         this.databaseReader = new DatabaseReader();
@@ -24,8 +26,6 @@ public class Hotel {
 
     public void getReservationsFromDatabase() {
         this.databaseReader.readReservations();
-
-
     }
 
 
