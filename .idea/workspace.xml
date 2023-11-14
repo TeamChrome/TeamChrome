@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="17a55140-5394-4c99-a630-bcb953960d6a" name="Changes" comment="updating welcome page GUI">
-      <change afterPath="$PROJECT_DIR$/src/main/java/BookRoom.fxml" afterDir="false" />
+    <list default="true" id="17a55140-5394-4c99-a630-bcb953960d6a" name="Changes" comment="changes and fixed lib.xml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeamChrome/main/java/GUI2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TeamChrome/main/java/GUI2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GUI2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/reserveRoom.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserveRoom.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
