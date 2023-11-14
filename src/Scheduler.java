@@ -4,7 +4,7 @@ import java.util.*;
 public class Scheduler {
 
 
-    Scheduler() {
+    public Scheduler() {
 
     }
 
