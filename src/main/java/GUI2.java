@@ -14,9 +14,9 @@ public class GUI2 extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
 
-        Parent root = FXMLLoader.load(getClass().getResource("FrontPage.fxml"));
+        //Parent root = FXMLLoader.load(getClass().getResource("FrontPage.fxml"));
         //Parent root = FXMLLoader.load(getClass().getResource("BookRoom.fxml"));
-        //Parent root = FXMLLoader.load(getClass().getResource("reserveRoom.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("reserveRoom.fxml"));
         primaryStage.setTitle("Welcome to Hotel Sun");
         primaryStage.setScene(new Scene(root,600, 300 ));
         primaryStage.show();
