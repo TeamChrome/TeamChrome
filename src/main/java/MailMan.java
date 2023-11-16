@@ -3,79 +3,48 @@ package src.main.java;
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.Properties;
 
 public class MailMan {
 
-
-    /*
-    String senderEmail;
-    String senderPassword;
-    Properties properties;
+    private final String senderEmail;
+    private final String senderPassword;
+    private final Properties properties;
 
 
     public MailMan() {
         senderEmail = "hotelsun380@gmail.com";
         senderPassword = "cdpo sghi ztbh ogfe";
-    }
-     */
-
-    public static void main(String[] args) {
-        // Sender's email address FINAL
-        String senderEmail = "hotelsun380@gmail.com";
-        // Sender's password FINAL
-        String senderPassword = "cdpo sghi ztbh ogfe";
-
-        // Recipient's email address
-        String recipientEmail = "mendoza.erik2903@gmail.com";
-
-        // Set the properties for the email server FINAL
-        Properties properties = new Properties();
+        properties = new Properties();
         properties.put("mail.smtp.auth", "true");
         properties.put("mail.smtp.starttls.enable", "true");
         properties.put("mail.smtp.host", "smtp.gmail.com");
         properties.put("mail.smtp.port", "587");
+    }
 
-        // Create a session with the properties and an authenticator
-        Session session = Session.getInstance(properties, new Authenticator() {
-            @Override
-            protected PasswordAuthentication getPasswordAuthentication() {
-                return new PasswordAuthentication(senderEmail, senderPassword);
-            }
-        });
+    public static void main(String[] args) {
 
-        try {
-            // Create a MimeMessage object
-            Message message = new MimeMessage(session);
-
-            // Set the sender's and recipient's email addresses
-            message.setFrom(new InternetAddress(senderEmail));
-            message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(recipientEmail));
-
-            // Set the email subject and body
-            message.setSubject("This is your reservation!");
-            message.setText("Guest ID: <UUID String>\n" +
-                    "Reservation ID: <UUID String>");
-
-            // Send the email
-            Transport.send(message);
-
-            System.out.println("Email sent successfully!");
-
-        } catch (MessagingException e) {
-            e.printStackTrace();
-        }
+        // this is a temporary main method tester.
+        // change the Guest information to test your own email.
+        MailMan mailman = new MailMan();
+        Guest guest = new Guest("Erik Mendoza",
+                "mendoza.erik2903@gmail.com",
+                "8182137221", "fakeaddress123");
+        Reservation reservation = new Reservation(guest.getId(), 101,
+                new Date(2023, Calendar.NOVEMBER, 29, 6, 30),
+                new Date(2023, Calendar.DECEMBER, 3, 6, 30));
+        mailman.sendEmail(mailman.properties, 1, guest, reservation);
     }
 
 
-    /*
-
-    public void startEmail(Properties properties) {
+    public void sendEmail(Properties properties, int mailCode, Guest guest, Reservation reservation) {
         Session newSession = createSession(properties, senderEmail, senderPassword);
-        Message newMessage = createMessage();
+        Message newMessage = createMessage(newSession, mailCode, guest, reservation);
     }
 
-    public Session createSession(Properties properties, String senderEmail, String senderPassword) {
+    private Session createSession(Properties properties, String senderEmail, String senderPassword) {
         Session session = Session.getInstance(properties, new Authenticator() {
             @Override
             protected PasswordAuthentication getPasswordAuthentication() {
@@ -86,44 +55,37 @@ public class MailMan {
     }
 
 
-    public Message createMessage(Session session) {
-        Message message = new MimeMessage(session);
+    private Message createMessage(Session session, int mailCode, Guest guest, Reservation reservation) {
+        try {
 
-        // Set the sender's and recipient's email addresses
-        message.setFrom(new InternetAddress(senderEmail));
-        message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(recipientEmail));
+            Message message = new MimeMessage(session);
 
-        // Set the email subject and body
-        message.setSubject("This is your reservation!");
-        message.setText("Guest ID: <UUID String>\n" +
-                "Reservation ID: <UUID String>");
+            // Set the sender's and recipient's email addresses
+            message.setFrom(new InternetAddress(senderEmail));
+            message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(guest.getEmail()));
 
-        // Send the email
-        Transport.send(message);
+            // Set the email subject and body
+            // We can edit this code to change the email contents
+            if (mailCode == 1) {
+                message.setSubject("This is your new reservation!");
+            } else if (mailCode == 2) {
+                message.setSubject("Your reservation has changed!");
+            }
+            message.setText(guest.getName() + ", here are your reservation details below.\n\n" +
+                    "Guest ID: " + reservation.getGuestID() + "\n" +
+                    "Reservation ID: " + reservation.getReservationID() + "\n" +
+                    "Date of Reservation: " + reservation.getCheckIn() + "\n" +
+                    "\tup until " + reservation.getCheckOut() + ".");
 
-        System.out.println("Email sent successfully!");
 
-    } catch (MessagingException e) {
+            // Send the email
+            Transport.send(message);
+            System.out.println("Email sent successfully!");
+            return message;
+        } catch (MessagingException e) {
         e.printStackTrace();
     }
-
-        return message;
+        return null;
     }
 
-
-    public String mailReservation(Guest guest, Reservation reservation) {
-        String recipientEmail = guest.getEmail();
-
-        return "";
-    }
-
-    public String mailEdition(Guest guest, Reservation reservation){
-
-        Message message = new MimeMessage(session);
-        String recipientEmail = guest.getEmail();
-
-        return "";
-    }
-
-    */
 }
