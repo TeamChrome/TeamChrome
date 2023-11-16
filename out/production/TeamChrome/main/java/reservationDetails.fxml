@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.GUI2">
+   <children>
+      <Label fx:id="thankYouLabel" layoutX="165.0" layoutY="85.0" text="Thank you for booking with Hotel Sun!">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="roomInfoTextArea" layoutX="65.0" layoutY="136.0" prefHeight="200.0" prefWidth="200.0" />
+      <TextArea fx:id="customerInfoTextArea" layoutX="335.0" layoutY="136.0" prefHeight="200.0" prefWidth="200.0" />
+      <Label layoutX="65.0" layoutY="119.0" text="Your selected room:" />
+      <Label layoutX="335.0" layoutY="119.0" text="Your information:" />
+      <Label fx:id="HotelSunLabel" layoutX="245.0" layoutY="41.0" text="Hotel Sun">
+         <font>
+            <Font name="Impact" size="35.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.45567867036011084" centerY="0.5095011876484561" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.9399999976158142" green="0.6800332069396973" blue="0.0658000037074089" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.8684210777282715" green="0.4100877046585083" blue="0.14473684132099152" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </textFill></Label>
+
+   </children>
+</AnchorPane>
