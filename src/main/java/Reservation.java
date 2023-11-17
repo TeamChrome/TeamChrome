@@ -82,6 +82,10 @@ public class Reservation {
         return true;
     }
 
+    public boolean doReservationsOverlap(Date checkIn, Date checkOut){
+        return !this.isWithinStay(checkIn) && !this.isWithinStay(checkOut);
+    }
+
     @Override
     public String toString() {
         return "Reservation{" +

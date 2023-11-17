@@ -10,6 +10,8 @@ public class Room {
 
     RoomType roomType;
     int roomNumber;
+
+    float roomCost;
     int roomLevel;
     boolean checkedIn;
 
@@ -18,13 +20,15 @@ public class Room {
         this.roomNumber = 0;
         this.roomLevel = 0;
         this.checkedIn = false;
+        this.roomCost = 0.0f;
     }
 
-    public Room(RoomType roomType, int roomNumber, int roomLevel, boolean checkedIn) {
+    public Room(RoomType roomType, int roomNumber, int roomLevel, boolean checkedIn, float roomCost) {
         this.roomType = roomType;
         this.setRoomNumber(roomNumber);
         this.setRoomLevel(roomLevel);
         this.checkedIn = checkedIn;
+        this.roomCost = roomCost;
     }
 
     //comments
@@ -78,11 +82,20 @@ public class Room {
         this.checkedIn = checkedIn;
     }
 
+    public float getRoomCost() {
+        return roomCost;
+    }
+
+    public void setRoomCost(float roomCost) {
+        this.roomCost = roomCost;
+    }
+
     @Override
     public String toString() {
         return "Room{" +
                 "roomType=" + roomType +
                 ", roomNumber=" + roomNumber +
+                ", roomCost=" + roomCost +
                 ", roomLevel=" + roomLevel +
                 ", checkedIn=" + checkedIn +
                 '}';

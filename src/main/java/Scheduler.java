@@ -1,10 +1,10 @@
-package src;
+package src.main.java;
 import java.util.*;
 
 public class Scheduler {
 
 
-    Scheduler() {
+    public Scheduler() {
 
     }
 
@@ -28,12 +28,30 @@ public class Scheduler {
 
     public void addGuest(Map<String, Guest> guests, Guest guest) {
         guests.put(guest.getId(), guest);
-        // ask DataBaseReader to add a new line to Guest CSV
+        // ask DataBaseReader to add a new line to src.main.java.Guest CSV
     }
 
     public void removeGuest(Map<String, Guest> guests, Guest guest) {
         guests.remove(guest.getId(), guest);
-        // ask DataBaseReader to delete a line from Guest CSV
+        // ask DataBaseReader to delete a line from src.main.java.Guest CSV
+    }
+
+    public boolean isRoomAvailibleDuringTime(Integer roomNumber, Map<String, Reservation> reservationMap, Date checkIn, Date checkOut){
+        Reservation reservationToCheck = null;
+        for(Reservation reservation: reservationMap.values()){
+            if(reservation.getRoomNumber() == roomNumber){
+                reservationToCheck = reservation;
+            }
+        }
+
+        if(reservationToCheck == null){
+            return true;
+        }
+        if(reservationToCheck.doReservationsOverlap(checkIn,checkOut)){
+            return false;
+        } else {
+            return true;
+        }
     }
 
     private void sendConfirmation() {

@@ -38,9 +38,9 @@ public class DatabaseReader {
             int roomLevel = roomNumber/100;
             Room.RoomType roomType = Room.RoomType.valueOf(currentRecord.get(1).toUpperCase(Locale.ROOT));
             float cost = Float.parseFloat((currentRecord.get(2).substring(0,currentRecord.get(2).length()-4)));
-
+            boolean checkedIn = currentRecord.get(3).compareTo("TRUE") == 0;
             //System.out.println("Room number: " + roomNumber + " Room Type: " + roomType + " Cost: " + cost);
-            Room currentRoom = new Room(roomType,roomNumber,roomLevel,false);
+            Room currentRoom = new Room(roomType,roomNumber,roomLevel,false,cost);
             this.rooms.add(currentRoom);
 
         }

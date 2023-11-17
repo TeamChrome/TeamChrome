@@ -14,7 +14,7 @@ public class RoomTest {
 
     @Test
     public void RoomConstructorParam(){
-        Room roomConstructorParam = new Room(Room.RoomType.SUITE,123,1,false);
+        Room roomConstructorParam = new Room(Room.RoomType.SUITE,123,1,false,0.0f);
         Assert.assertEquals(roomConstructorParam.getRoomType(),Room.RoomType.SUITE);
         Assert.assertEquals(roomConstructorParam.getRoomNumber(),123);
         Assert.assertEquals(roomConstructorParam.getRoomLevel(),1);
@@ -23,7 +23,7 @@ public class RoomTest {
 
     @Test
     public void RoomSetCheckedIn(){
-        Room roomSetCheckedIn = new Room(Room.RoomType.SUITE,123,1,false);
+        Room roomSetCheckedIn = new Room(Room.RoomType.SUITE,123,1,false,0.0f);
         roomSetCheckedIn.setCheckedIn(true);
         Assert.assertTrue(roomSetCheckedIn.isCheckedIn());
         roomSetCheckedIn.setCheckedIn(false);
@@ -32,7 +32,7 @@ public class RoomTest {
 
     @Test
     public void RoomCheckInOut(){
-        Room roomSetCheckedIn = new Room(Room.RoomType.SUITE,123,1,false);
+        Room roomSetCheckedIn = new Room(Room.RoomType.SUITE,123,1,false,0.0f);
         roomSetCheckedIn.checkIn();
         Assert.assertTrue(roomSetCheckedIn.isCheckedIn());
         roomSetCheckedIn.checkIn();
@@ -45,7 +45,7 @@ public class RoomTest {
 
     @Test
     public void setRoomLevel(){
-        Room roomSetCheckedIn = new Room(Room.RoomType.SUITE,123,1,false);
+        Room roomSetCheckedIn = new Room(Room.RoomType.SUITE,123,1,false,0.0f);
         int[] roomsToCheck = {1,2,3,4,5};
         for(int x: roomsToCheck){
             roomSetCheckedIn.setRoomLevel(x);
@@ -58,7 +58,7 @@ public class RoomTest {
 
     @Test
     public void setRoomNumber() {
-        Room roomSetNumber = new Room(Room.RoomType.SUITE, 123, 1, false);
+        Room roomSetNumber = new Room(Room.RoomType.SUITE, 123, 1, false,0.0f);
         for (int i = 0; i < Room.MAXIMUM_ROOM_NUMBER; i++) {
             roomSetNumber.setRoomNumber(i);
             Assert.assertEquals(roomSetNumber.getRoomNumber(), i);
