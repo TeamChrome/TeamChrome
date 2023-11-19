@@ -11,12 +11,12 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.GUI2">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.FrontPageController">
    <children>
-      <Button layoutX="43.0" layoutY="263.0" mnemonicParsing="false" text="Book Room" />
-      <Button layoutX="156.0" layoutY="263.0" mnemonicParsing="false" text="Modify Reservation" />
-      <Button layoutX="316.0" layoutY="263.0" mnemonicParsing="false" text="View Reservation" />
-      <Button layoutX="457.0" layoutY="263.0" mnemonicParsing="false" text="View Amenities" />
+      <Button fx:id="BookRoomButton" layoutX="43.0" layoutY="263.0" mnemonicParsing="false" onAction="#BookRoom" text="Book Room" />
+      <Button fx:id="ModifyRes" layoutX="156.0" layoutY="263.0" mnemonicParsing="false" onAction="#ModifyRes" text="Modify Reservation" />
+      <Button fx:id="ViewRes" layoutX="316.0" layoutY="263.0" mnemonicParsing="false" onAction="#ViewRes" text="View Reservation" />
+      <Button fx:id="ViewAmenities" layoutX="457.0" layoutY="263.0" mnemonicParsing="false" onAction="#ViewAmenities" text="View Amenities" />
       <Separator layoutX="43.0" layoutY="234.0" prefHeight="0.0" prefWidth="515.0" />
       <Text layoutX="179.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HOTEL SUN" textAlignment="CENTER" wrappingWidth="242.0">
          <font>
