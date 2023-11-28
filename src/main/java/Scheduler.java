@@ -14,6 +14,7 @@ public class Scheduler {
 
     public void addReservation(Map<String, Reservation> reservations, Reservation reservation) {
         reservations.put(reservation.getReservationID(), reservation);
+
         // ask DataBaseReader to add a new line to Reservation CSV
     }
 
@@ -36,6 +37,15 @@ public class Scheduler {
         // ask DataBaseReader to delete a line from src.main.java.Guest CSV
     }
 
+
+    /**
+     * Checks if a room is available during a given time frame by searching through reservations
+     * @param roomNumber
+     * @param reservationMap
+     * @param checkIn
+     * @param checkOut
+     * @return
+     */
     public boolean isRoomAvailibleDuringTime(Integer roomNumber, Map<String, Reservation> reservationMap, Date checkIn, Date checkOut){
         Reservation reservationToCheck = null;
         for(Reservation reservation: reservationMap.values()){

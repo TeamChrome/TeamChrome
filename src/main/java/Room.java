@@ -31,20 +31,34 @@ public class Room {
         this.roomCost = roomCost;
     }
 
-    //comments
-    //isn't the room level the first digit of the room number?
+    /**
+     * Gets the room type
+     * @return roomType
+     */
     public RoomType getRoomType() {
         return roomType;
     }
 
+    /**
+     * Sets the room type
+     * @param roomType
+     */
     public void setRoomType(RoomType roomType) {
         this.roomType = roomType;
     }
 
+    /**
+     * Returns the room number
+     * @return roomNumber
+     */
     public int getRoomNumber() {
         return roomNumber;
     }
 
+    /**
+     * Sets the room level and discards and generates warning messages if outside of range
+     * @param roomNumber
+     */
     public void setRoomNumber(int roomNumber) {
         if(roomNumber < 0 || roomNumber > MAXIMUM_ROOM_NUMBER){
             System.err.println("[Room.setRoomNumber] The given roomNumber is invalid: " + roomNumber);
@@ -53,10 +67,18 @@ public class Room {
         this.roomNumber = roomNumber;
     }
 
+    /**
+     *
+     * @return roomLevel
+     */
     public int getRoomLevel() {
         return roomLevel;
     }
 
+    /**
+     * Sets the room level and discards and generates warning messages if outside of range
+     * @param roomLevel
+     */
     public void setRoomLevel(int roomLevel) {
         if(roomLevel < 0 || roomLevel > MAXIMUM_ROOM_LEVEL){
             System.err.println("[Room.setRoomLevel] The given roomLevel is invalid: " + roomLevel);
@@ -65,27 +87,49 @@ public class Room {
         this.roomLevel = roomLevel;
     }
 
+    /**
+     * Returns if room is checkedIn
+     * @return checkedIn
+     */
     public boolean isCheckedIn() {
         return checkedIn;
     }
 
+    /**
+     *
+     */
     public void checkIn(){
         this.checkedIn = true;
     }
 
+    /**
+     *
+     */
     public void checkOut(){
         this.checkedIn = false;
     }
 
+    /**
+     * Sets the checkedIn value
+     * @param checkedIn
+     */
     //we won't need this if we decide to have two different checkIn or checkOut functions
     public void setCheckedIn(boolean checkedIn) {
         this.checkedIn = checkedIn;
     }
 
+
+    /**
+     * @return roomCost
+     */
     public float getRoomCost() {
         return roomCost;
     }
 
+    /**
+     * Sets the roomCost
+     * @param roomCost
+     */
     public void setRoomCost(float roomCost) {
         this.roomCost = roomCost;
     }

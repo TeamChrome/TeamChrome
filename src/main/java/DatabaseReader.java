@@ -20,6 +20,9 @@ public class DatabaseReader {
         this.reservations = new ArrayList<Reservation>();
     }
 
+    /**
+     * Reads the rooms from the RoomsInformation.csv file and stores it within the rooms array
+     */
     public void readRooms(){
         List<List<String>> records = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader("src/main/java/data/RoomsInformation.csv"))) {
@@ -46,6 +49,9 @@ public class DatabaseReader {
         }
     }
 
+    /**
+     * Reads the reservations from the CurrentReservations.csv file and stores it within the reservationsList
+     */
     public void readReservations(){
         SimpleDateFormat formatter = new SimpleDateFormat("dd-MMM-yyyy", Locale.ENGLISH);
         List<List<String>> records = new ArrayList<>();
@@ -59,7 +65,7 @@ public class DatabaseReader {
             throw new RuntimeException(e);
         }
         //we skip the first one because its a header
-        for(int room = 1; room < records.size(); room++){
+        for(int room = 0; room < records.size(); room++){
             List<String> currentRecord = records.get(room);
             String reservationID = currentRecord.get(0);
             String guestID = currentRecord.get(1);
@@ -80,8 +86,13 @@ public class DatabaseReader {
         }
     }
 
+
+    /**
+     * Writes the current reservations in the array to the file.
+     * It is important to note that this function overwrites the file, it does not append
+     */
     public void writeReservations(){
-        try (BufferedWriter bw = new BufferedWriter(new FileWriter("src/main/java/data/CurrentReservations.csv"))) {
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter("src/main/java/data/CurrentReservations.csv",false))) {
             for(Reservation currentReservation: this.reservations){
                 bw.write(currentReservation.toCSVFormat());
             }
@@ -90,6 +101,23 @@ public class DatabaseReader {
             throw new RuntimeException(e);
         }
     }
+
+
+    /*
+
+    public void writeReservations(Map<String, Reservation> reservationMap){
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter("src/main/java/data/CurrentReservations.csv"))) {
+            for(Map.Entry<String,Reservation> currentReservationPair: reservationMap.entrySet()){
+                Reservation currentReservation = currentReservationPair.getValue();
+                String csvValue = currentReservation.toCSVFormat();
+                bw.write(csvValue);
+            }
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    */
 
 
 

@@ -24,6 +24,7 @@ public class Hotel {
         this.scheduler = new Scheduler();
         this.roomList = new HashMap<Integer, Room>();
         this.reservations = new HashMap<String, Reservation>();
+        this.guests = new HashMap<String, Guest>();
     }
 
     public void getRoomsFromDatabase() {
@@ -47,16 +48,33 @@ public class Hotel {
 
     }
 
-    public void reserveRoomForGuest(Guest guestIn, Integer roomNumber, Date checkIn, Date checkOut){
+    /**
+     * Reserves a room for a guest using given parameters
+     * @param guestIn
+     * @param roomNumber
+     * @param checkIn
+     * @param checkOut
+     * @return reservationId
+     */
+    public String reserveRoomForGuest(Guest guestIn, Integer roomNumber, Date checkIn, Date checkOut){
         Room roomToReserve = this.roomList.get(roomNumber);
         Reservation reservation = this.scheduler.createReservation(guestIn,roomToReserve,checkIn,checkOut);
+        String reservationId = reservation.getReservationID();
         this.scheduler.addReservation(this.reservations,reservation);
+        return reservationId;
 
     }
 
+
+    /**
+     * Adds a new guest to the scheduler
+     * @param guestIn
+     */
     public void addNewGuest(Guest guestIn){
         this.scheduler.addGuest(this.guests,guestIn);
     }
+
+
 
 
 }

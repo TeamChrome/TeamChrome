@@ -70,7 +70,13 @@ public class Reservation {
         this.checkOut = checkOut;
     }
 
+
+    /** Checks if a given date is within the current date range for the reservation
+     * @param date
+     * @return boolean
+     */
     public boolean isWithinStay(Date date){
+
         if(checkIn.after(date)){
             return false;
         }
@@ -82,6 +88,13 @@ public class Reservation {
         return true;
     }
 
+
+    /**
+     * Checks if two different reservation ranges overlap
+     * @param checkIn
+     * @param checkOut
+     * @return
+     */
     public boolean doReservationsOverlap(Date checkIn, Date checkOut){
         return !this.isWithinStay(checkIn) && !this.isWithinStay(checkOut);
     }
@@ -97,6 +110,10 @@ public class Reservation {
                 '}';
     }
 
+    /**
+     * Generates a string in the same CSV format used to store the reservations within the CurrentReservations file
+     * @return out
+     */
     public String toCSVFormat(){
         String out = "";
         SimpleDateFormat formatter = new SimpleDateFormat("dd-MMM-yyyy", Locale.ENGLISH);

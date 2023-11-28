@@ -16,7 +16,6 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.net.URL;
@@ -79,7 +78,14 @@ public class RoomSearchTableController implements Initializable {
         Stage stage = (Stage) suiteButton.getScene().getWindow();
         stage.setScene(loader.load());
         RoomCheckoutController controller = loader.getController();
-        controller.loadData(selectedRoom);
+        LocalDate checkInLocalDate = this.checkInDatePicker.getValue();
+        Instant checkInInstant = Instant.from(checkInLocalDate.atStartOfDay(ZoneId.systemDefault()));
+        Date checkInDate = Date.from(checkInInstant);
+
+        LocalDate checkOutLocalDate = this.checkOutDatePicker.getValue();
+        Instant checkOutInstant = Instant.from(checkOutLocalDate.atStartOfDay(ZoneId.systemDefault()));
+        Date checkOutDate = Date.from(checkOutInstant);
+        controller.loadData(selectedRoom,checkInDate,checkOutDate,hotel);
         controller.updateText();
         //stage.show();
 
@@ -96,6 +102,11 @@ public class RoomSearchTableController implements Initializable {
         this.hotel = hotel;
     }
 
+    /**
+     * drawTable updates the data within the TableView
+     * This is a separate function to ensure the table is drawn, and then updated
+     *
+     */
     public void drawTable(){
         if(this.hotel == null){
             System.out.println("Hotel is null");
@@ -137,6 +148,11 @@ public class RoomSearchTableController implements Initializable {
         roomSearchTable.setItems(sortedData);
     }
 
+    /**
+     * This function adds all the listeners to the buttons to allow us to filter the data
+     * @param filteredList
+     * @return filteredList
+     */
     private FilteredList<RoomSearchModel> addListeners(FilteredList<RoomSearchModel> filteredList) {
         suiteButton.selectedProperty().addListener(((observableValue, aBoolean, t1) -> {
             filteredList.setPredicate(roomSearchModel -> {
@@ -184,6 +200,13 @@ public class RoomSearchTableController implements Initializable {
 
 
 
+    // @TODO
+
+    /**
+     * WIP - addListener to filter the rooms based on the given date range
+     * @param filteredList
+     * @return filteredList
+     */
     private FilteredList<RoomSearchModel> filterRoomsOnDate(FilteredList<RoomSearchModel> filteredList){
 //        Date checkInDate = this.checkInDatePicker.
         LocalDate checkInLocalDate = this.checkInDatePicker.getValue();

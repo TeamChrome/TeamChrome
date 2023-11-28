@@ -16,6 +16,7 @@ public class GUI extends Application {
         this.hotel = new Hotel("Hotel SUN");
         this.hotel.getReservationsFromDatabase();
         this.hotel.getRoomsFromDatabase();
+        System.out.println("Current reservations: " + this.hotel.reservations);
     }
 
     public GUI(Hotel hotel){

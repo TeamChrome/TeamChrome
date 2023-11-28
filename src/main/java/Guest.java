@@ -54,4 +54,14 @@ public class Guest {
         }
 
 
+    @Override
+    public String toString() {
+        return "Guest{" +
+                "name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", phoneNum='" + phoneNum + '\'' +
+                ", address='" + address + '\'' +
+                ", id='" + id + '\'' +
+                '}';
+    }
 }
