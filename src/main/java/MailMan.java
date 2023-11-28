@@ -24,10 +24,12 @@ public class MailMan {
         properties.put("mail.smtp.port", "587");
     }
 
+
+    /*
+        This is a temporary main method tester,
+        change the Guest information to test your own email.
     public static void main(String[] args) {
 
-        // this is a temporary main method tester.
-        // change the Guest information to test your own email.
         MailMan mailman = new MailMan();
         Guest guest = new Guest("Erik Mendoza",
                 "mendoza.erik2903@gmail.com",
@@ -37,6 +39,7 @@ public class MailMan {
                 new Date(2023, Calendar.DECEMBER, 3, 6, 30));
         mailman.sendEmail(mailman.properties, 1, guest, reservation);
     }
+     */
 
 
     public void sendEmail(Properties properties, int mailCode, Guest guest, Reservation reservation) {
