@@ -95,6 +95,7 @@ public class DatabaseReader {
         try (BufferedWriter bw = new BufferedWriter(new FileWriter("src/main/java/data/CurrentReservations.csv",false))) {
             for(Reservation currentReservation: this.reservations){
                 bw.write(currentReservation.toCSVFormat());
+                bw.write("\n");
             }
 
         } catch (IOException e) {

@@ -22,6 +22,7 @@ import java.net.URL;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.ZoneId;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.ResourceBundle;
 
@@ -119,8 +120,6 @@ public class RoomSearchTableController implements Initializable {
                 roomSearchModelObservableList.add(new RoomSearchModel(room.roomType.toString(),room.roomCost,roomNumber,room.roomLevel));
             }
         }
-
-
         roomTypeTableColumn.setCellValueFactory(new PropertyValueFactory<>("roomType"));
         roomCostTableColumn.setCellValueFactory(new PropertyValueFactory<>("costPerNight"));
         roomNumberTableColumn.setCellValueFactory(new PropertyValueFactory<>("roomNumber"));
@@ -129,19 +128,7 @@ public class RoomSearchTableController implements Initializable {
         checkInDatePicker.setValue(LocalDate.now());
         checkOutDatePicker.setValue(LocalDate.now());
         FilteredList<RoomSearchModel> filteredData = new FilteredList<>(roomSearchModelObservableList, b -> true);
-
-        checkInDatePicker.valueProperty().addListener((ov, oldValue, newValue) -> {
-            this.filterRoomsOnDate(filteredData);
-        });
-
-        checkOutDatePicker.valueProperty().addListener((ov, oldValue, newValue) -> {
-            this.filterRoomsOnDate(filteredData);
-        });
-
-
         addListeners(filteredData);
-
-
         SortedList<RoomSearchModel> sortedData = new SortedList<>(filteredData);
         sortedData.comparatorProperty().bind(roomSearchTable.comparatorProperty());
 
@@ -150,41 +137,22 @@ public class RoomSearchTableController implements Initializable {
 
     /**
      * This function adds all the listeners to the buttons to allow us to filter the data
+     *
      * @param filteredList
-     * @return filteredList
      */
-    private FilteredList<RoomSearchModel> addListeners(FilteredList<RoomSearchModel> filteredList) {
-        suiteButton.selectedProperty().addListener(((observableValue, aBoolean, t1) -> {
-            filteredList.setPredicate(roomSearchModel -> {
+    private void addListeners(FilteredList<RoomSearchModel> filteredList) {
+        kingButton.selectedProperty().addListener((ov, oldValue, newValue) -> {
+            this.filterRoomOnType(filteredList);
+        });
 
-                if(roomSearchModel.getRoomType().equals("SUITE")){
-                    return t1;
-                }
+        suiteButton.selectedProperty().addListener((ov, oldValue, newValue) -> {
+            this.filterRoomOnType(filteredList);
+        });
 
-                return false;
-            });
-        }));
+        doubleButton.selectedProperty().addListener((ov, oldValue, newValue) -> {
+            this.filterRoomOnType(filteredList);
+        });
 
-        kingButton.selectedProperty().addListener(((observableValue, aBoolean, t1) -> {
-            filteredList.setPredicate(roomSearchModel -> {
-
-                if(roomSearchModel.getRoomType().equals("KING")){
-                    return t1;
-                }
-
-                return false;
-            });
-        }));
-
-        doubleButton.selectedProperty().addListener(((observableValue, aBoolean, t1) -> {
-            filteredList.setPredicate(roomSearchModel -> {
-                if(roomSearchModel.getRoomType().equals("DOUBLE")){
-                    return t1;
-                }
-
-                return false;
-            });
-        }));
 
         roomSearchTable.getSelectionModel().selectedItemProperty().addListener(new ChangeListener() {
             @Override
@@ -195,19 +163,51 @@ public class RoomSearchTableController implements Initializable {
                 selectedRoom = roomModel.toRoom();
             }
         });
-        return filteredList;
+
+        checkInDatePicker.valueProperty().addListener((ov, oldValue, newValue) -> {
+            this.filterRoomsOnDate(filteredList);
+
+            System.out.println("Check in updated");
+        });
+
+
+        checkOutDatePicker.valueProperty().addListener((ov, oldValue, newValue) -> {
+            this.filterRoomsOnDate(filteredList);
+            System.out.println("Check out updated");
+        });
+
+
+    }
+
+    private void filterRoomOnType(FilteredList<RoomSearchModel> filteredList) {
+        boolean suiteEnabled = suiteButton.selectedProperty().getValue();
+        boolean kingEnabled = kingButton.selectedProperty().getValue();
+        boolean doubleEnabled = doubleButton.selectedProperty().getValue();
+
+        ArrayList<String> roomsToFilter = new ArrayList<String>();
+        if(suiteEnabled){
+            roomsToFilter.add("SUITE");
+        }
+
+        if(kingEnabled){
+            roomsToFilter.add("KING");
+        }
+
+        if(doubleEnabled){
+            roomsToFilter.add("DOUBLE");
+        }
+
+
+        filteredList.setPredicate(s -> roomsToFilter.contains(s.roomType));
+
+
     }
 
 
-
-    // @TODO
-
     /**
-     * WIP - addListener to filter the rooms based on the given date range
      * @param filteredList
-     * @return filteredList
      */
-    private FilteredList<RoomSearchModel> filterRoomsOnDate(FilteredList<RoomSearchModel> filteredList){
+    private void filterRoomsOnDate(FilteredList<RoomSearchModel> filteredList){
 //        Date checkInDate = this.checkInDatePicker.
         LocalDate checkInLocalDate = this.checkInDatePicker.getValue();
         Instant checkInInstant = Instant.from(checkInLocalDate.atStartOfDay(ZoneId.systemDefault()));
@@ -217,10 +217,20 @@ public class RoomSearchTableController implements Initializable {
         Instant checkOutInstant = Instant.from(checkOutLocalDate.atStartOfDay(ZoneId.systemDefault()));
         Date checkOutDate = Date.from(checkOutInstant);
 
-        System.out.println(checkInDate);
-        System.out.println(checkOutDate);
+        int roomNumberToRemove = -1;
+        for(Reservation reservation: this.hotel.reservations.values()){
+            if(reservation.doReservationsOverlap(checkInDate,checkOutDate)){
+                roomNumberToRemove = reservation.getRoomNumber();
 
-        return filteredList;
+            }
+        }
+
+        final int roomNumberToRemoveFinal = roomNumberToRemove;
+        if(roomNumberToRemove != -1){
+            filteredList.setPredicate(s -> !s.roomNumber.equals(roomNumberToRemoveFinal));
+        } else {
+            filteredList.setPredicate(s -> true);
+        }
 
     }
 

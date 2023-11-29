@@ -96,7 +96,7 @@ public class Reservation {
      * @return
      */
     public boolean doReservationsOverlap(Date checkIn, Date checkOut){
-        return !this.isWithinStay(checkIn) && !this.isWithinStay(checkOut);
+        return this.isWithinStay(checkIn) || this.isWithinStay(checkOut);
     }
 
     @Override

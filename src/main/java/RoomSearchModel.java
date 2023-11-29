@@ -17,6 +17,13 @@ public class RoomSearchModel {
         this.roomLevel = roomLevel;
     }
 
+    public RoomSearchModel(Room roomIn) {
+        this.roomType = roomIn.roomType.toString();
+        this.costPerNight = roomIn.roomCost;
+        this.roomNumber = roomIn.roomNumber;
+        this.roomLevel = roomIn.roomLevel;
+    }
+
     public String getRoomType() {
         return roomType;
     }

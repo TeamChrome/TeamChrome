@@ -32,6 +32,7 @@
   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.Scene?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.DatePicker?>
@@ -47,22 +48,22 @@
 
 <Scene xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="src.main.java.RoomSearchTableController">
    <root>
-      <AnchorPane prefHeight="461.0" prefWidth="688.0">
+      <AnchorPane>
          <children>
-            <TableView fx:id="roomSearchTable" layoutX="44.0" layoutY="158.0" prefHeight="299.0" prefWidth="538.0">
+            <TableView fx:id="roomSearchTable" layoutX="44.0" layoutY="158.0" prefHeight="299.0" prefWidth="577.0">
               <columns>
                 <TableColumn fx:id="roomTypeTableColumn" prefWidth="97.0" text="Room Type" />
                 <TableColumn fx:id="roomCostTableColumn" prefWidth="132.0" text="Cost Per Night" />
                   <TableColumn fx:id="roomNumberTableColumn" prefWidth="173.0" text="Room Number" />
-                  <TableColumn fx:id="roomLevelTableColumn" prefWidth="173.0" text="Room Number" />
+                  <TableColumn fx:id="roomLevelTableColumn" prefWidth="173.0" text="Room Floor" />
       
                     </columns>
             </TableView>
             <RadioButton fx:id="suiteButton" layoutX="130.0" layoutY="130.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="67.0" text="SUITE" />
             <RadioButton fx:id="kingButton" layoutX="197.0" layoutY="130.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="67.0" text="KING" />
             <RadioButton fx:id="doubleButton" layoutX="268.0" layoutY="130.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="90.0" text="DOUBLE" />
-            <Button layoutX="601.0" layoutY="430.0" mnemonicParsing="false" onAction="#goToCheckoutPage" text="Checkout" />
-            <Label layoutX="259.0" layoutY="24.0" text="Hotel Sun">
+            <Button layoutX="630.0" layoutY="431.0" mnemonicParsing="false" onAction="#goToCheckoutPage" text="Checkout" />
+            <Label layoutX="289.0" layoutY="24.0" text="Hotel Sun">
                <font>
                   <Font name="Impact" size="35.0" />
                </font>
@@ -89,6 +90,9 @@
             <Label layoutX="327.0" layoutY="95.0" text="Check-Out" />
             <Label layoutX="44.0" layoutY="131.0" prefHeight="17.0" prefWidth="67.0" text="Room Type" />
          </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
       </AnchorPane>
    </root>
 </Scene>

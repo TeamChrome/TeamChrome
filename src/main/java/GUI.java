@@ -11,7 +11,8 @@ public class GUI extends Application {
     Hotel hotel;
     Stage mainStage;
 
-    RoomSearchTableController roomSearchTableController;
+    FrontPageController frontPageController;
+//    RoomSearchTableController roomSearchTableController;
     public GUI(){
         this.hotel = new Hotel("Hotel SUN");
         this.hotel.getReservationsFromDatabase();
@@ -34,35 +35,13 @@ public class GUI extends Application {
     }
     @Override
     public void start(Stage stage) throws Exception {
-      /*
-
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("RoomSearchTable.fxml"));
-        Scene roomSearch = loader.load();
-        stage.setScene(roomSearch);
-        stage.show();
-        */
 
 
-        //System.out.println("Selected room: " + selectedRoom.toString());
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("RoomSearchTable.fxml"));
-//        Scene roomCheckoutscene = new Scene(roomCheckoutParent);
-//        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("FrontPage.fxml"));
         stage.setScene(loader.load());
-        this.roomSearchTableController = loader.getController();
-        this.roomSearchTableController.loadData(this.hotel);
+        this.frontPageController = loader.getController();
+        this.frontPageController.loadData(this.hotel);
         stage.show();
-        this.roomSearchTableController.drawTable();
-
-
-
-
-//        controller.updateText();
 
     }
-
-//    public void initAndShow(Hotel hotel){
-//        this.roomSearchTableController.loadData(hotel);
-//        this.mainStage.show();
-//        this.roomSearchTableController.drawTable();
-//    }
 }
