@@ -42,8 +42,10 @@ public class FrontPageController implements Initializable {
     }
 
     @FXML
-    void ViewAmenities(ActionEvent event) {
-
+    void ViewAmenities(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("amenities.fxml"));
+        Stage window = (Stage) ViewAmenities.getScene().getWindow();
+        window.setScene(new Scene(root, 600, 300));
     }
 
     @FXML

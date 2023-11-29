@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="17a55140-5394-4c99-a630-bcb953960d6a" name="Changes" comment="added front page controller class">
+    <list default="true" id="17a55140-5394-4c99-a630-bcb953960d6a" name="Changes" comment="removed checkbox that we don't need">
+      <change afterPath="$PROJECT_DIR$/src/main/java/AmenitiesController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/amenities.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeamChrome/main/java/reserveRoom.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TeamChrome/main/java/reserveRoom.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FrontPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FrontPageController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +74,7 @@
       <recent name="$PROJECT_DIR$/src/main/java" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.GUI">
+  <component name="RunManager" selected="Application.GUI2">
     <configuration name="GUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.java.GUI" />
       <module name="TeamChrome" />
@@ -228,7 +232,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700608512942</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="removed checkbox that we don't need">
+      <option name="closed" value="true" />
+      <created>1701214147345</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1701214147345</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -254,7 +266,8 @@
     <MESSAGE value="updated reservationDetails.fxml" />
     <MESSAGE value="added exit button for reservationDetails.fxml page" />
     <MESSAGE value="added front page controller class" />
-    <option name="LAST_COMMIT_MESSAGE" value="added front page controller class" />
+    <MESSAGE value="removed checkbox that we don't need" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed checkbox that we don't need" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
