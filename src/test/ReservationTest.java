@@ -73,4 +73,35 @@ public class ReservationTest {
         Assert.assertTrue(reservation.isWithinStay(checkOut));
 
     }
+
+    @Test
+    public void doReservationsOverlap() {
+        Date checkIn = null;
+        Date checkOut = null;
+        Date beforeCheckIn = null;
+        Date afterCheckOut = null;
+        int roomNumber = 123;
+        String guestID = UUID.randomUUID().toString();
+        SimpleDateFormat ft = new SimpleDateFormat ("yyyy.MM.dd");
+        try {
+            checkIn = ft.parse("2023.08.17");
+            checkOut = ft.parse("2023.08.19");
+            beforeCheckIn = ft.parse("2023.08.10");
+            afterCheckOut = ft.parse("2023.08.20");
+        } catch (ParseException e){
+            System.err.println("Parsing error in doReservationsOverlap!");
+            Assert.fail();
+        }
+        Reservation reservation = new Reservation(guestID,roomNumber,checkIn,checkOut);
+        boolean overlap = reservation.doReservationsOverlap(beforeCheckIn,afterCheckOut);
+
+        Reservation reservationOne = new Reservation(guestID,roomNumber,beforeCheckIn,afterCheckOut);
+        boolean overlapTwo = reservationOne.doReservationsOverlap(checkIn,checkOut);
+        //Reservation reservationSuperset = new Reservation(guestID,roomNumber,beforeCheckIn,afterCheckOut);
+        Assert.assertTrue(overlap);
+        Assert.assertTrue(overlapTwo);
+
+
+    }
 }
+

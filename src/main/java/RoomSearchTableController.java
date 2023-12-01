@@ -217,17 +217,17 @@ public class RoomSearchTableController implements Initializable {
         Instant checkOutInstant = Instant.from(checkOutLocalDate.atStartOfDay(ZoneId.systemDefault()));
         Date checkOutDate = Date.from(checkOutInstant);
 
-        int roomNumberToRemove = -1;
+        ArrayList<Integer> roomNumbersToRemove = new ArrayList<Integer>();
         for(Reservation reservation: this.hotel.reservations.values()){
             if(reservation.doReservationsOverlap(checkInDate,checkOutDate)){
-                roomNumberToRemove = reservation.getRoomNumber();
+                roomNumbersToRemove.add(reservation.getRoomNumber());
 
             }
         }
 
-        final int roomNumberToRemoveFinal = roomNumberToRemove;
-        if(roomNumberToRemove != -1){
-            filteredList.setPredicate(s -> !s.roomNumber.equals(roomNumberToRemoveFinal));
+        final ArrayList<Integer> roomNumbersToRemoveFinal = roomNumbersToRemove;
+        if(!roomNumbersToRemove.isEmpty()){
+            filteredList.setPredicate(s -> !(roomNumbersToRemoveFinal.contains(s.roomNumber)));
         } else {
             filteredList.setPredicate(s -> true);
         }

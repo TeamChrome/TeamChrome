@@ -47,21 +47,30 @@ public class Scheduler {
      * @return
      */
     public boolean isRoomAvailibleDuringTime(Integer roomNumber, Map<String, Reservation> reservationMap, Date checkIn, Date checkOut){
-        Reservation reservationToCheck = null;
-        for(Reservation reservation: reservationMap.values()){
-            if(reservation.getRoomNumber() == roomNumber){
-                reservationToCheck = reservation;
+        Reservation reservationToCheck = null; //1
+        for(Reservation reservation: reservationMap.values()){ //2
+
+            //enclosed area green
+            if(reservation.getRoomNumber() == roomNumber){ //3
+
+                //enclosed area yellow
+                reservationToCheck = reservation; //4
+                break;
             }
+
         }
 
-        if(reservationToCheck == null){
-            return true;
+        if(reservationToCheck != null){ //5
+
+            //enclosed area blue
+            if(reservationToCheck.doReservationsOverlap(checkIn,checkOut)){ //6
+                return false; //7
+            }
+
         }
-        if(reservationToCheck.doReservationsOverlap(checkIn,checkOut)){
-            return false;
-        } else {
-            return true;
-        }
+
+        //enclosed area purple
+        return true; //8
     }
 
     private void sendConfirmation() {

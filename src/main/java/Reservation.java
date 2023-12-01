@@ -77,6 +77,14 @@ public class Reservation {
      */
     public boolean isWithinStay(Date date){
 
+        if(date.equals(this.checkIn) || date.equals(this.checkOut)){
+            return true;
+        }
+
+
+        return date.after(checkIn) && date.before(checkOut);
+
+        /*
         if(checkIn.after(date)){
             return false;
         }
@@ -86,6 +94,8 @@ public class Reservation {
         }
 
         return true;
+
+         */
     }
 
 
@@ -96,7 +106,8 @@ public class Reservation {
      * @return
      */
     public boolean doReservationsOverlap(Date checkIn, Date checkOut){
-        return this.isWithinStay(checkIn) || this.isWithinStay(checkOut);
+        Reservation temp = new Reservation("test",0,checkIn,checkOut);
+        return this.isWithinStay(checkIn) || this.isWithinStay(checkOut) || temp.isWithinStay(this.checkIn) || temp.isWithinStay(this.checkOut);
     }
 
     @Override
