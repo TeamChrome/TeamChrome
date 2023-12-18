@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Team Chrome" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17a55140-5394-4c99-a630-bcb953960d6a" name="Changes" comment="Created new scene and connections between theme">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Team_Chrome.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ReservationDetailsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/data/Guests.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/TeamChrome.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TeamChrome.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TeamChrome/main/java/GUI.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TeamChrome/main/java/RoomCheckout.fxml" beforeDir="false" />
@@ -13,11 +22,17 @@
       <change beforePath="$PROJECT_DIR$/out/production/TeamChrome/main/java/RoomSearchTable.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TeamChrome/main/java/RoomSearchTableController$1.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TeamChrome/main/java/RoomSearchTableController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DatabaseReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DatabaseReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FrontPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FrontPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FrontPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FrontPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Guest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Guest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MailMan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MailMan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Reservation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Room.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/RoomCheckout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RoomCheckout.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/RoomCheckoutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RoomCheckoutController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RoomSearchTable.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RoomSearchTable.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RoomSearchTableController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RoomSearchTableController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ViewReservationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewReservationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/CurrentReservations.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/CurrentReservations.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,12 +55,12 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "MaxwellKozlov595"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;MaxwellKozlov595&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -88,7 +103,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "create.test.in.the.same.root": "true",
-    "git-widget-placeholder": "GUI",
+    "git-widget-placeholder": "Runner",
     "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "18",
     "last_opened_file_path": "/Users/maxwell/Documents/Java/TeamChrome",
@@ -96,7 +111,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.JavaFX",
@@ -228,6 +243,7 @@
       <workItem from="1696370981609" duration="567000" />
       <workItem from="1696373143512" duration="135000" />
       <workItem from="1696976617356" duration="3437000" />
+      <workItem from="1701984716377" duration="3353000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit from Room">
       <option name="closed" value="true" />

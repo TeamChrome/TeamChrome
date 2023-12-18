@@ -4,34 +4,23 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class ViewReservationController implements Initializable {
-    @FXML
-    private TextField reservationID;
-
-    @FXML
-    private Button viewReservation;
+public class ReservationDetailsController implements Initializable {
 
     @FXML
     private TextArea roomInfoTextArea;
 
     @FXML
     private TextArea customerInfoTextArea;
-
     private Reservation reservation;
-    private Guest guest;
 
     private Hotel hotel;
-
-
 
 
 
@@ -41,43 +30,10 @@ public class ViewReservationController implements Initializable {
 
     }
 
-    public void loadData(Hotel hotel){
+    public void loadData(Hotel hotel, Reservation reservation){
+        this.reservation = reservation;
         this.hotel = hotel;
 
-    }
-
-    public void lookupReservation(){
-        String reservationID = this.reservationID.getText();
-        Reservation foundReservation = this.hotel.reservations.get(reservationID);
-        /*
-        for(String reservationIDLoop: this.hotel.reservations.keySet()){ //2
-            System.out.println("Comparison between: [" + reservationIDLoop + "] and [" + reservationID + "]");
-            if(reservationID.compareTo(reservationIDLoop) == 0){
-                System.out.println("Strings are equal");
-            } else {
-                System.out.println("Strings are not equal");
-            }
-            //enclosed area green
-
-
-        }
-        */
-
-        if(foundReservation == null){
-            //do something
-            System.out.println("reservation of id [" + reservationID + "] was not found");
-            return;
-        } else {
-            System.out.println("Found reservation " + foundReservation.toString());
-        }
-        this.reservation = foundReservation;
-        this.updateAllInfoText();
-    }
-
-
-    public void updateAllInfoText(){
-        //updateCustomerInfoText();
-        updateRoomInfoText();
     }
 
     public void updateRoomInfoText(){
@@ -107,4 +63,8 @@ public class ViewReservationController implements Initializable {
 
 
     }
+
+
+
+
 }

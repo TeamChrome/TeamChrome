@@ -8,12 +8,14 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import org.w3c.dom.Text;
 
 import java.io.IOException;
 import java.net.URL;
+import java.time.Duration;
+import java.time.temporal.Temporal;
 import java.util.Date;
 import java.util.ResourceBundle;
+import java.util.concurrent.TimeUnit;
 
 public class RoomCheckoutController implements Initializable {
 
@@ -24,7 +26,10 @@ public class RoomCheckoutController implements Initializable {
 
     private Date selectedCheckOutDate;
 
+    private Reservation bookedReservation;
     private Hotel hotel;
+
+    private MailMan mailman;
     @FXML
     private TextArea roomTextArea;
 
@@ -59,15 +64,31 @@ public class RoomCheckoutController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources){
+        this.mailman = new MailMan();
+
+    }
 
 
+    public void goToReservationDetails() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("ReservationDetails.fxml"));
+
+        Stage stage = (Stage) roomTextArea.getScene().getWindow();
+        stage.setScene(loader.load());
+        ReservationDetailsController controller = loader.getController();
+        controller.loadData(this.hotel,this.bookedReservation);
+        stage.show();
+        controller.updateRoomInfoText();
+        controller.updateCustomerInfoText();
     }
 
     public void goBackToRoomSearch(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("RoomSearchTable.fxml"));
         Stage stage = (Stage) roomTextArea.getScene().getWindow();
         stage.setScene(loader.load());
+        RoomSearchTableController controller = loader.getController();
+        controller.loadData(this.hotel);
         stage.show();
+        controller.drawTable();
 
 
 
@@ -81,12 +102,19 @@ public class RoomCheckoutController implements Initializable {
     }
 
     public void updateText(){
-        float calculatedCost = 99.9f;
+        long daysStaying = getDays();
+        float calculatedCost = this.selectedRoom.roomCost * daysStaying;
         String text = "Room type: " + this.selectedRoom.roomType.toString() +
-                "\nRoom Number:" + this.selectedRoom.roomNumber +
+                "\nRoom Number: " + this.selectedRoom.roomNumber +
                 "\nRoom Level: " + this.selectedRoom.roomLevel +
+                "\nDays Staying: " + daysStaying +
                 "\nCost for Stay: $" + calculatedCost;
         roomTextArea.setText(text);
+    }
+
+    public long getDays(){
+        long diffInMillis = Math.abs(this.selectedCheckOutDate.getTime() - this.selectedCheckInDate.getTime());
+        return TimeUnit.DAYS.convert(diffInMillis, TimeUnit.MILLISECONDS) + 1;
     }
 
 
@@ -108,9 +136,18 @@ public class RoomCheckoutController implements Initializable {
         this.hotel.addNewGuest(newGuest);
         String reservationId = this.hotel.reserveRoomForGuest(newGuest,roomNumber,this.selectedCheckInDate,this.selectedCheckOutDate);
         Reservation mostRecentReservation = this.hotel.reservations.get(reservationId);
+        this.bookedReservation = mostRecentReservation;
         System.out.println(mostRecentReservation);
         this.hotel.databaseReader.reservations.add(mostRecentReservation);
         this.hotel.databaseReader.writeReservations();
+        this.mailman.sendEmail(1,newGuest,mostRecentReservation);
+
+        try {
+            this.goToReservationDetails();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
 
     }
 

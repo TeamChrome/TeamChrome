@@ -57,8 +57,14 @@ public class FrontPageController implements Initializable {
     }
 
     @FXML
-    void ViewRes(ActionEvent event) {
-
+    void ViewRes(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("ViewReservation.fxml"));
+        Stage stage = (Stage) this.ViewRes.getScene().getWindow();
+        stage.setScene(loader.load());
+        ViewReservationController controller = loader.getController();
+        controller.loadData(this.hotel);
+        stage.show();
+        //controller.drawTable();
     }
 
     @Override

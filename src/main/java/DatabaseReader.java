@@ -82,6 +82,7 @@ public class DatabaseReader {
             }
 
             Reservation currentReservation = new Reservation(guestID,roomNumber,checkIn,checkOut);
+            currentReservation.setReservationID(reservationID);
             this.reservations.add(currentReservation);
         }
     }

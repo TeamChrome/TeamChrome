@@ -54,14 +54,24 @@ public class Guest {
         }
 
 
-    @Override
-    public String toString() {
-        return "Guest{" +
-                "name='" + name + '\'' +
-                ", email='" + email + '\'' +
-                ", phoneNum='" + phoneNum + '\'' +
-                ", address='" + address + '\'' +
-                ", id='" + id + '\'' +
-                '}';
-    }
+        @Override
+        public String toString() {
+            return "Guest{" +
+                    "name='" + name + '\'' +
+                    ", email='" + email + '\'' +
+                    ", phoneNum='" + phoneNum + '\'' +
+                    ", address='" + address + '\'' +
+                    ", id='" + id + '\'' +
+                    '}';
+        }
+
+
+        public String getPrettyString(){
+            String out = "";
+            out+= "Guest Name: " + this.name + "\n";
+            out+= "Billing Address:" + this.address + "\n";
+            out+= "Guest Number: " + this.phoneNum + "\n";
+            out+= "Guest Email:" + this.email + "\n";
+            return out;
+        }
 }

@@ -42,8 +42,8 @@ public class MailMan {
      */
 
 
-    public void sendEmail(Properties properties, int mailCode, Guest guest, Reservation reservation) {
-        Session newSession = createSession(properties, senderEmail, senderPassword);
+    public void sendEmail(int mailCode, Guest guest, Reservation reservation) {
+        Session newSession = createSession(this.properties, senderEmail, senderPassword);
         Message newMessage = createMessage(newSession, mailCode, guest, reservation);
     }
 

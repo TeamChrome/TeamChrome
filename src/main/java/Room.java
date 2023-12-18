@@ -144,4 +144,13 @@ public class Room {
                 ", checkedIn=" + checkedIn +
                 '}';
     }
+
+
+    public String getPrettyStringRoom(){
+        String out = "";
+        out+= "Room Floor: " + this.roomLevel + "\n";
+        out+= "Room Number: " + this.roomNumber + "\n";
+        out+= "Room Cost: $" + this.roomCost + " per day" + "\n";
+        return out;
+    }
 }
